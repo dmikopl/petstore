@@ -10,7 +10,7 @@
 <body>
     <h1>Find by status</h1>
 
-    <form action="/pet/find/by/status" method="get">
+    <form action="{{ route('findByStatus') }}" method="get">
         <div class="form-group">
             <label for="status">Status:</label>
             <select name="status" id="status" class="form-control">

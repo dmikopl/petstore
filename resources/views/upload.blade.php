@@ -30,7 +30,7 @@
     </div>
     @endif
 
-    <form action="{{ url('/pet/' . $pet['id'] . '/uploadImage') }}" method="post" enctype="multipart/form-data">
+    <form action="{{ route('uploadImage', ['petId' => $pet['id']]) }}" method="post" enctype="multipart/form-data">
         @csrf
         <label for="additionalMetadata">Additional Metadata:</label>
         <input type="text" id="additionalMetadata" name="additionalMetadata" value="{{ old('additionalMetadata') }}"><br><br>

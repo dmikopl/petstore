@@ -9,7 +9,7 @@
 
 <body>
     <h1>Edit Pet</h1>
-    <form action="/pet/{{ $pet['id'] }}/edit" method="post">
+    <form action="{{ route('edit', ['petId' => $pet['id']]) }}" method="post">
         @csrf
         @method('PUT')
         <label for="name">Name:</label>

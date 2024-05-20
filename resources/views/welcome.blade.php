@@ -26,7 +26,10 @@
 <p>/pets/{pet}/edit</p>
 <p>/pets/{pet}/update</p>
 <p>/pets/{pet}/upload</p>
-<p>/pets/find/by/status</p>
+
+<a href="{{ route('pets.findByStatusForm') }}">
+        <button>Find Pets By Status</button>
+</a>
 </body>
 
 </html>

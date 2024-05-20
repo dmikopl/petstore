@@ -7,11 +7,11 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/pet/{petId}', [PetController::class, 'show']);
-Route::post('/pet', [PetController::class, 'add']);
-Route::put('/pet/{petId}/edit', [PetController::class, 'edit']);
-Route::post('/pet/{petId}/update', [PetController::class, 'update']);
-Route::delete('/pet/{petId}', [PetController::class, 'delete']);
+Route::get('/pet/{petId}', [PetController::class, 'show'])->name('show');
+Route::post('/pet', [PetController::class, 'add'])->name('add');
+Route::put('/pet/{petId}/edit', [PetController::class, 'edit'])->name('edit');
+Route::post('/pet/{petId}/update', [PetController::class, 'update'])->name('update');
+Route::delete('/pet/{petId}', [PetController::class, 'delete'])->name('delete');
 Route::post('/pet/{petId}/uploadImage', [PetController::class, 'uploadImage'])->name('uploadImage');
 Route::get('/pet/find/by/status', [PetController::class, 'findByStatus'])->name('findByStatus');
 

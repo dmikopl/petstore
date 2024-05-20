@@ -48,26 +48,26 @@
     </ul>
     </p>
 
-    <form action="/pet/{{ $pet['id'] }}" method="post">
+    <form action="{{ route('show', ['petId' => $pet['id']]) }}" method="post">
         @csrf
         @method('DELETE')
         <button type="submit" onclick="return confirm('Are you sure you want to delete this pet?')">Delete Pet</button>
     </form>
     <br>
 
-    <a href="/pets/{{ $pet['id'] }}/edit">
+    <a href="{{ route('pets.edit', ['pet' => $pet['id']]) }}">
         <button>Edit Pet</button>
     </a>
 
     <br></br>
 
-    <a href="/pets/{{ $pet['id'] }}/update">
+    <a href="{{ route('pets.update', ['pet' => $pet['id']]) }}">
         <button>Update Form Pet</button>
     </a>
 
     <br></br>
 
-    <a href="/pets/{{ $pet['id'] }}/upload">
+    <a href="{{ route('pets.upload', ['pet' => $pet['id']]) }}">
         <button>Upload Photo For Pet</button>
     </a>
     @if ($errors->any())

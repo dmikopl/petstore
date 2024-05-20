@@ -9,7 +9,7 @@
 
 <body>
     <h1>Add New Pet</h1>
-    <form action="/pet" method="post">
+    <form action="{{ route('add') }}" method="post">
         @csrf
         <label for="name">Name:</label>
         <input type="text" id="name" name="name" value="{{ old('name') }}" required><br><br>
