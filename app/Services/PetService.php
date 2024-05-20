@@ -27,7 +27,6 @@ class PetService
     public function updatePet($data)
     {
         $formData = $this->prepareFormData($data);
-        // var_dump(json_encode($formData)); exit;
         return Http::put("{$this->baseUrl}/pet", $formData)->json();
     }
 
